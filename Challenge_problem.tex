@@ -257,35 +257,47 @@ Now, $\eta$ can be calculated as :
 \end{align}
 Now, 
 \begin{align}
-\vec{u}^T + \frac{\eta}{2}\vec{p_1}^T = \myvec{2.884 & -2.2}\\
+\vec{u}^T + \frac{\eta}{2}\vec{p_1}^T = \myvec{\frac{15-2\sqrt{3}}{4} & \frac{-14+3\sqrt{3}}{4}}\\
 \frac{\eta}{2} \vec{p_1} -\vec{u}= \frac{3-2\sqrt{3}}{2}\myvec{\frac{1}{2}\\ \frac{\sqrt{3}}{2} } - \myvec{3\\-2}\\
-\frac{\eta}{2} \vec{p_1} -\vec{u}=\myvec{-3.116\\1.8}
+\frac{\eta}{2} \vec{p_1} -\vec{u}=\myvec{\frac{-9-2\sqrt{3}}{4}\\\frac{2+3\sqrt{3}}{4}}
 \end{align}
 
 Now considering the augmented matrix,
 \begin{align}
-\myvec{2.884 & -2.2 & -5\\3 & -\sqrt{3} & -3.116\\-\sqrt{3} & 1 & 1.8}\xleftrightarrow[]{R_2\leftarrow R_2/\sqrt{3}}\\
-\myvec{2.884 & -2.2 & -5\\\sqrt{3} & -1 & -1.8\\-\sqrt{3} & 1 & 1.8 }\\
-\xleftrightarrow[]{R_3\leftarrow R_2+R_3}\\
-\myvec{2.884 & -2.2 & -5\\\sqrt{3} & -1 & -1.8\\0 & 0 & 0}
+\myvec{\frac{15-2\sqrt{3}}{4} & \frac{-14+3\sqrt{3}}{4} & -5\\3 & -\sqrt{3} & \frac{-9-2\sqrt{3}}{4}\\-\sqrt{3} & 1 & \frac{2+3\sqrt{3}}{4}}\xleftrightarrow[]{R_2\leftarrow R_2/\sqrt{3}}\\
+\myvec{\frac{15-2\sqrt{3}}{4} & \frac{-14+3\sqrt{3}}{4} & -5\\\sqrt{3} & -1 & \frac{-(2+3\sqrt{3})}{4}\\-\sqrt{3} & 1 & \frac{2+3\sqrt{3}}{4}}\\
+\xleftrightarrow[R_2\leftarrow R_2/\sqrt{3}]{R_3\leftarrow R_2+R_3}\\
+\myvec{2.88397 & -2.20096 & -5\\1 & -0.57735 & -1.03923\\0 & 0 & 0}\\
+\xleftrightarrow[]{R_1\leftarrow R_1/2.88397}
+\myvec{1 & -0.76317 & -1.7337\\1 & -0.57735 & -1.03923\\0 & 0 & 0}\\
+\xleftrightarrow[]{R_2\leftarrow R_2-R_1}
+\myvec{1 & -0.76317 & -1.7337\\0 & 0.18582 & 0.69447\\0 & 0 & 0}
 \end{align}
 So, 
 \begin{align}
-\myvec{2.884 & -2.2\\\sqrt{3} & -1}\vec{c}=\myvec{-5\\-1.8}\\
-\myvec{2.884 & -2.2\\\sqrt{3} & -1}\vec{c}=\myvec{-5\\-1.8}\\
+\myvec{1 & -0.76317\\0 & 0.18582}\vec{c}=\myvec{-1.7337\\0.69447}\\
+\implies c_1= 1.118\\
+c_2=3.737
 \end{align}
 From there we can get $\vec{c}$=$\myvec{1.12\\3.74}$. The vertex of parabola will be at (1.12, 3.74).
 
-%\renewcommand{\theequation}{\theenumi}
-%\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
-%\numberwithin{equation}{enumi}
-%\item Verification of the above problem using python code.\\
-%\solution The  following Python code generates Fig. \ref{fig:hyperbola}
-%\begin{lstlisting}
-%codes/hyperbola_3.py
-%\end{lstlisting}
-%%
-%\end{enumerate}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{./figs/parabola.png}
+\caption{Parabola}
+\label{fig:parabola}
+\end{figure}
+
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+\numberwithin{equation}{enumi}
+\item Verification of the above problem using python code.\\
+\solution The  following Python code generates Fig. \ref{fig:parabola}
+\begin{lstlisting}
+codes/check_parab.py
+\end{lstlisting}
+%
+\end{enumerate}
 
 \end{document}
 
