@@ -229,18 +229,28 @@ Now,
 $\vec{P}$ should be chosen in such a way that $\vec{P}^T = \vec{P}^{-1}$ and 
 $\vec{P}^T V \vec{P}$ = $\vec{D}$. but here it is not satisfying these quations. Here, $\vec{P}^{-1} =\frac{1}{4} \vec{P}^T$. So, $\vec{P}$ should be selected as :
 \begin{align}
-\vec{V} = \myvec{\frac{1}{2} & -\frac{\sqrt{3}}{2}\\\frac{\sqrt{3}}{2} & \frac{1}{2}}
+\vec{P} = \myvec{\frac{1}{2} & -\frac{\sqrt{3}}{2}\\\frac{\sqrt{3}}{2} & \frac{1}{2}}
 \end{align}
-From here we can get that, $\vec{P}^T = \vec{P}^{-1}$ and $\vec{P}^T V \vec{P}$ = $\vec{D}$.
+If I did it so, then $\mydet{\vec{P}}$=1 and $\vec{P}^{-1}$=$\vec{P}^T$.
+So,
+\begin{align}
+\vec{p_1} = \myvec{\frac{1}{2} \\ \frac{\sqrt{3}}{2}}
+\end{align}
+and 
+\begin{align}
+\vec{p_2} = \myvec{-\frac{\sqrt{3}}{2}\\\frac{1}{2}}
+\end{align}
 Now, $\eta$ can be calculated as : 
 \begin{align}
+\eta = 2 \vec{p_1}^T \vec{u}\\
 \eta = 2 \myvec{\frac{1}{2} & \frac{\sqrt{3}}{2}} \myvec{3 \\ -2}\\
 \eta =  3-2\sqrt{3}
 \end{align}
 Now, 
 \begin{align}
 \vec{u}^T + \eta \vec{p_1}^T = \myvec{2.76 & -2.4}\\
-\eta \vec{p_1} -\vec{u}= \myvec{\frac{-3 - 2\sqrt{3}}{2}\\ \frac{-2 + 3\sqrt{3}}{2} }
+\eta \vec{p_1} -\vec{u}= (3-2\sqrt{3})\myvec{\frac{1}{2}\\ \frac{\sqrt{3}}{2} } - \myvec{3\\-2}\\
+\eta \vec{p_1} -\vec{u}=\myvec{\frac{-3 - 2\sqrt{3}}{2}\\\frac{-2 +3\sqrt{3}}{2}}
 \end{align}
 
 Now considering the augmented matrix,
