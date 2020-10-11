@@ -249,24 +249,24 @@ Now, $\eta$ can be calculated as :
 \end{align}
 Now, 
 \begin{align}
-\vec{u}^T + \eta \vec{p_1}^T = \myvec{2.76 & -2.4}\\
-\eta \vec{p_1} -\vec{u}= (3-2\sqrt{3})\myvec{\frac{1}{2}\\ \frac{\sqrt{3}}{2} } - \myvec{3\\-2}\\
-\eta \vec{p_1} -\vec{u}=\myvec{\frac{-3 - 2\sqrt{3}}{2}\\\frac{-2 +3\sqrt{3}}{2}}
+\vec{u}^T + \frac{\eta}{2}\vec{p_1}^T = \myvec{2.884 & -2.2}\\
+\frac{\eta}{2} \vec{p_1} -\vec{u}= \frac{3-2\sqrt{3}}{2}\myvec{\frac{1}{2}\\ \frac{\sqrt{3}}{2} } - \myvec{3\\-2}\\
+\frac{\eta}{2} \vec{p_1} -\vec{u}=\myvec{-3.116\\1.8}
 \end{align}
 
 Now considering the augmented matrix,
 \begin{align}
-\myvec{2.76 & -2.4 & -5\\3 & -\sqrt{3} & \frac{-3 - 2\sqrt{3}}{2}\\-\sqrt{3} & 1 & \frac{-2 +3\sqrt{3}}{2} }\xleftrightarrow[]{R_2\leftarrow R_2/\sqrt{3}}\\
-\myvec{2.76 & -2.4 & -5\\\sqrt{3} & -1 & \frac{-\sqrt{3} - 2}{2}\\-\sqrt{3} & 1 & \frac{-2 +3\sqrt{3}}{2} }\\
-%\xleftrightarrow[]{R_3\leftarrow R_2+R_3}\\
-%\myvec{2.76 & -2.4 & -5\\\sqrt{3} & -1 & \frac{-\sqrt{3} - 2}{2}\\0 & 0 & 0}
+\myvec{2.884 & -2.2 & -5\\3 & -\sqrt{3} & -3.116\\-\sqrt{3} & 1 & 1.8}\xleftrightarrow[]{R_2\leftarrow R_2/\sqrt{3}}\\
+\myvec{2.884 & -2.2 & -5\\\sqrt{3} & -1 & -1.8\\-\sqrt{3} & 1 & 1.8 }\\
+\xleftrightarrow[]{R_3\leftarrow R_2+R_3}\\
+\myvec{2.884 & -2.2 & -5\\\sqrt{3} & -1 & -1.8\\0 & 0 & 0}
 \end{align}
-%So, 
-%\begin{align}
-%\myvec{2.76 & -2.4\\\sqrt{3} & -1}\vec{c}=\myvec{5\\\frac{-2 - \sqrt{3}}{2}}\\
-%\myvec{2.76 & -2.4\\\sqrt{3} & -1}\vec{c}=\myvec{5\\-1.866}
-%\end{align}
-%From there we can get $\vec{c}$=$\myvec{2.25\\0.22}$. The vertex of parabola will be at (2.25, 0.22).
+So, 
+\begin{align}
+\myvec{2.884 & -2.2\\\sqrt{3} & -1}\vec{c}=\myvec{-5\\-1.8}\\
+\myvec{2.884 & -2.2\\\sqrt{3} & -1}\vec{c}=\myvec{-5\\-1.8}\\
+\end{align}
+From there we can get $\vec{c}$=$\myvec{1.12\\3.74}$. The vertex of parabola will be at (1.12, 3.74).
 
 %\renewcommand{\theequation}{\theenumi}
 %\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
