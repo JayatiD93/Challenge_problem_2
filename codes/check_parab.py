@@ -36,7 +36,8 @@ D_vec,P = LA.eig(V)
 D = np.diag(D_vec)
 print('D_vec[0]',D_vec[0])
 print('D=',D)
-p = P[:,1]
+P[:,[0, 1]] =P[:,[1, 0]]
+p = P[:,0]
 print('p1=',p)
 #k1 = np.dot(u,p)
 #print('k1=',k1)
@@ -58,7 +59,7 @@ cA = np.vstack((u+eta*0.5*p,V))
 cb = np.vstack((-f,(eta*0.5*p-u).reshape(-1,1)))
 c = LA.lstsq(cA,cb,rcond=None)[0]
 c = c.flatten()
-print('c=',c,'focal length=',foc)
+print('vertex=',c,'focal length=',foc)
 print('cA=',cA,'cb=',cb)
 #print(p,c)
 
