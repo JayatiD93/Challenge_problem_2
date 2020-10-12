@@ -14,7 +14,7 @@ from conics.funcs import *
 #setting up plot
 fig = plt.figure()
 ax = fig.add_subplot(111, aspect='equal')
-len = 100
+len = 10
 y = np.linspace(-4,4,len)
 
 #parab parameters
@@ -62,6 +62,7 @@ c = c.flatten()
 print('vertex=',c,'focal length=',foc)
 print('cA=',cA,'cb=',cb)
 #print(p,c)
+print(c[0],c[1])
 
 c1 = np.array(([(u@V@u-2*D_vec[1]*u@u+D_vec[1]**2*f)/(eta*D_vec[1]**2),0]))
 xStandardparab = np.vstack((x,y))
@@ -119,4 +120,6 @@ plt.axis('equal')
 #plt.savefig('./figs/parab/parab_test.png')
 #subprocess.run(shlex.split("termux-open ./figs/parab/parab_test.pdf"))
 ##else
+#plt.xlim(-5, 10)
+#plt.ylim(0, 10)
 plt.show()
