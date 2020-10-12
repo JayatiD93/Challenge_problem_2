@@ -54,8 +54,8 @@ x = parab_gen(y,foc)
 #p = -p
 #cA = np.vstack((u+eta*p,V))
 #cb = np.vstack((-f,(eta*p-u).reshape(-1,1)))
-cA = np.vstack((u+eta*p,V))
-cb = np.vstack((-f,(eta*p-u).reshape(-1,1)))
+cA = np.vstack((u+eta*0.5*p,V))
+cb = np.vstack((-f,(eta*0.5*p-u).reshape(-1,1)))
 c = LA.lstsq(cA,cb,rcond=None)[0]
 c = c.flatten()
 print('c=',c,'focal length=',foc)
@@ -105,7 +105,7 @@ for i, txt in enumerate(vert_labels):
 #Plotting the actual parabola
 #plt.plot(xStandardparab[0,:],xStandardparab[1,:],label='Parabola',color='r')
 plt.plot(xActualparab[0,:],xActualparab[1,:],label='Parabola',color='r')
-plt.plot(c[0],c[1],marker='o',color='black',label='centre (0.48,2.64)') # origin point 
+plt.plot(c[0],c[1],marker='o',color='black',label='centre (1.12,3.74)') # origin point 
 
 plt.xlabel('$x$')
 plt.ylabel('$y$')
