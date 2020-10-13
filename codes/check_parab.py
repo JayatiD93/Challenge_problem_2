@@ -6,15 +6,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy import linalg as LA
-
-
 from conics.funcs import *
 
 
 #setting up plot
 fig = plt.figure()
 ax = fig.add_subplot(111, aspect='equal')
-len = 10
+len = 100
 y = np.linspace(-4,4,len)
 
 #parab parameters
@@ -120,6 +118,6 @@ plt.axis('equal')
 #plt.savefig('./figs/parab/parab_test.png')
 #subprocess.run(shlex.split("termux-open ./figs/parab/parab_test.pdf"))
 ##else
-#plt.xlim(-5, 10)
-#plt.ylim(0, 10)
+plt.xlim(-1, 20)
+plt.ylim(-1, 20)
 plt.show()
